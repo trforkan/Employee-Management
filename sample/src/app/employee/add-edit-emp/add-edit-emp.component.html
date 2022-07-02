@@ -1,0 +1,33 @@
+<div class="form-group row">
+    
+    <div class="col-sm-10">
+        <label class="col-sm-2 col-form-label">Employee Name</label>
+        <input type="text" class="form-control " [(ngModel)]="EmployeeName" placeholder="Enter Employee Name">
+        
+        <!-- <input type="text" class="form-control " [(ngModel)]="EmployeeName" placeholder="Enter Employee Name">
+        <input type="text" class="form-control " [(ngModel)]="EmployeeName" placeholder="Enter Employee Name"> -->
+    </div>
+    
+    <div class="col-sm-10">
+        <label class="col-sm-2 col-form-label">Department</label>
+        <input type="text" class="form-control " [(ngModel)]="Department" placeholder="Enter Department Name">
+    </div>
+    
+    <div class="col-sm-10">
+        <label class="col-sm-2 col-form-label">Email</label>
+        <input type="text" class="form-control " [(ngModel)]="Email" placeholder="sample@mail.com" style="margin-bottom: 5px;">
+    </div>
+    
+</div>
+
+<button 
+    class="btn btn-primary"
+    (click)="addEmployee()"
+    *ngIf="emp.EmployeeId==0"
+>Add</button>
+
+<button 
+    class="btn btn-primary"
+    (click)="updateEmployee()"
+    *ngIf="emp.EmployeeId!=0"
+>Update</button>
